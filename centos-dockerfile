@@ -1,0 +1,32 @@
+# DOCKER SETUP - CentOS 6
+# Pham Dinh Giang
+# Help document from: https://hub.docker.com/_/centos/
+FROM centos:6.7
+
+RUN yum -y install sudo
+RUN yum -y install wget
+RUN yum -y install telnet
+
+RUN yum -y update; yum clean all
+
+RUN yum -y install gcc
+RUN yum -y install yum-utils
+RUN yum -y install tar
+
+RUN yum groupinstall -y development
+RUN yum install -y zlib-dev openssl-devel sqlite-devel bzip2-devel
+
+
+############ INSTALL REMI REPOSITORY############
+RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+RUN wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+RUN rpm -Uvh remi-release-6*.rpm
+RUN yum -y --enablerepo=remi update
+
+RUN adduser -m phdgiang
+WORKDIR /home/phdgiang
+RUN chmod 755 /home/phdgiang
+
+# Default command 
+CMD ["tail", "-fn100", "/dev/null"]
+

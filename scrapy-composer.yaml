@@ -1,0 +1,16 @@
+version: '2'
+services:
+    mycentos:
+        build:
+            context: ./
+            dockerfile: centos-dockerfile
+        image: mycentos
+    scrapy:
+        build:
+            context: ./
+            dockerfile: scrapy-dockerfile
+        depends_on: 
+            -   mycentos
+        image: scrapy
+        volumes:
+            -   ~/Projects/My/scrapy:/home/phdgiang/product/scrapy

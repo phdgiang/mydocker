@@ -1,0 +1,24 @@
+# DOCKER SETUP - CentOS 6
+# Pham Dinh Giang
+# Help document from: https://hub.docker.com/_/centos/
+FROM mycentos
+
+
+### https://www.digitalocean.com/community/tutorials/how-to-set-up-python-2-7-6-and-3-3-3-on-centos-6-4
+RUN python --version
+RUN wget http://www.python.org/ftp/python/3.5.2/Python-3.5.2.tar.xz
+RUN xz -d Python-3.5.2.tar.xz
+RUN tar -xvf Python-3.5.2.tar
+WORKDIR /home/phdgiang/Python-3.5.2/
+
+RUN ./configure
+RUN make
+RUN make altinstall
+
+RUN echo "alias python=/usr/local/bin/python3.5" >> ~/.bashrc
+RUN source ~/.bashrc
+
+ADD scripts/install-pip.sh ./install-pip.sh
+RUN /bin/bash -i install-pip.sh
+
+echo "Done to install!"
