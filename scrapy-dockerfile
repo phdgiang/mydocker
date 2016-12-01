@@ -21,4 +21,4 @@ RUN source ~/.bashrc
 ADD scripts/install-pip.sh ./install-pip.sh
 RUN /bin/bash -i install-pip.sh
 
-echo "Done to install!"
+RUN echo "Done to install!"

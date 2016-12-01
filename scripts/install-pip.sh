@@ -11,4 +11,4 @@ pip install virtualenv
 pip install Scrapy
 
 # Keep container alive
-tail -fn100 /dev/null
+# tail -fn100 /dev/null

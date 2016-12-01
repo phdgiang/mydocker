@@ -13,4 +13,4 @@ services:
             -   mycentos
         image: scrapy
         volumes:
-            -   ~/Projects/My/scrapy:/home/phdgiang/product/scrapy
+            -   ~/Projects/My/scrapy:/home/phdgiang/scrapy
