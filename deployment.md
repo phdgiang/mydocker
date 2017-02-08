@@ -13,9 +13,8 @@ Inline-style:
     *   Server working user: `hnsys`
     *   Server working folder: `/home/hnsys/property-crawler`
     *   Gearmand client should connect to Gearmand server from beginning
-        *   `cd /home/hnsys/property-crawler`
-        *   `gearman -w -h ${GEARMAND_HOST} -f crawl -- ./spider_worker.py`
-
+        `cd /home/hnsys/property-crawler`
+        `gearman -w -h ${GEARMAND_HOST} -f crawl -- ./spider_worker.py`
 # Web Admin installation
 * Environment requirement
     * Web Admin using laravel boilerplate, so the environment requirement/setup is similar:
