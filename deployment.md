@@ -13,12 +13,12 @@ Inline-style:
     *   Server working user: `hnsys`
     *   Server working folder: `/home/hnsys/property-crawler`
     *   Gearmand client should connect to Gearmand server from beginning
-        `cd /home/hnsys/property-crawler`
-        `gearman -w -h ${GEARMAND_HOST} -f crawl -- ./spider_worker.py`
+        `cd /home/hnsys/property-crawler`    
+        `gearman -w -h ${GEARMAND_HOST} -f crawl -- ./spider_worker.py`    
 # Web Admin installation
 * Environment requirement
     * Web Admin using laravel boilerplate, so the environment requirement/setup is similar:
-        `https://github.com/takaaki-mizuno/laravel-boilerplate`
+        `https://github.com/takaaki-mizuno/laravel-boilerplate`    
     * MongoDB 3.4
 
 * Steps to setup:
@@ -26,9 +26,9 @@ Inline-style:
     *   Server working user: `hnsys`
     *   Server working folder: `/var/www/property-crawler-admin`
     *   Run init script to setup environment:
-        `cd /var/www/property-crawler-admin`
-        `./init-crawler-admin.sh`
-    It will:
+        `cd /var/www/property-crawler-admin`    
+        `./init-crawler-admin.sh`    
+    It will:    
         *   Create .env file from .env.example
         *   Replace MySQL Host/Port accordingly
         *   Replace Gearmand server host/port accordingly
