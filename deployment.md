@@ -12,9 +12,9 @@ Inline-style:
     *   Please check file: `crawler-dockerfile`
     *   Server working user: `hnsys`
     *   Server working folder: `/home/hnsys/property-crawler`
-    *   Gearmand client should connect to Gearmand server from beginning
-        \`cd /home/hnsys/property-crawler`
-        \`gearman -w -h ${GEARMAND_HOST} -f crawl -- ./spider_worker.py`
+    *   Gearmand client should connect to Gearmand server from beginning  
+        `cd /home/hnsys/property-crawler`  
+        `gearman -w -h ${GEARMAND_HOST} -f crawl -- ./spider_worker.py`
 # Web Admin installation
 * Environment requirement
     * Web Admin using laravel boilerplate, so the environment requirement/setup is similar:
@@ -25,7 +25,7 @@ Inline-style:
     *   Please check file: `crawler-admin-dockerfile`
     *   Server working user: `hnsys`
     *   Server working folder: `/var/www/property-crawler-admin`
-    *   Run init script to setup environment:
+    *   Run init script to setup environment:  
         `cd /var/www/property-crawler-admin`    
         `./init-crawler-admin.sh`    
     It will:    
